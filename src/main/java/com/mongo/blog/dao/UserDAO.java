@@ -1,4 +1,4 @@
-package com.mongo.blog;
+package com.mongo.blog.dao;
 
 import com.mongodb.ErrorCategory;
 import com.mongodb.MongoWriteException;
@@ -16,7 +16,7 @@ import java.util.Random;
 
 public class UserDAO {
     private final MongoCollection<Document> usersCollection;
-    private Random random = new SecureRandom();
+    private final Random random = new SecureRandom();
 
     public UserDAO(final MongoDatabase blogDatabase) {
         usersCollection = blogDatabase.getCollection("users");
@@ -64,7 +64,6 @@ public class UserDAO {
 
         return user;
     }
-
 
     private String makePasswordHash(String password, String salt) {
         try {

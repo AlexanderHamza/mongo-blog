@@ -1,4 +1,4 @@
-package com.mongo.blog;
+package com.mongo.blog.dao;
 
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
